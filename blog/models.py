@@ -29,3 +29,16 @@ class Post(BaseModel):
     class Meta:
         verbose_name = _("Post")
         verbose_name_plural = _("2.Posts")
+
+
+class Tags(models.Model):
+    name = models.CharField(max_length=100, verbose_name=_("name"))
+
+    def __str__(self) -> str:
+        return self.name
+    
+    class Meta:
+        verbose_name = _("Tag")
+        verbose_name_plural = _("3.Tags")
+
+        
